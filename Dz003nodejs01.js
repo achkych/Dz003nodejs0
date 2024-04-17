@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 const { changeInfo, readInfo, writeInfo } = require('./counterReadWrite');
-const fs = require('fs');
-const path = require('path');
-const filepath = path.join(__dirname, 'counters.json');
+
 
 app.get('/', (req, res) => {
     changeInfo('/', 5);
